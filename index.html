@@ -141,7 +141,7 @@
 <!-- Sticky Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="#home">Portfolio</a>
+    <!-- <a class="navbar-brand" href="#home">Portfolio</a> -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -157,7 +157,7 @@
           <a class="nav-link" href="#projects">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#blogs">Blogs</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>
@@ -172,8 +172,8 @@
   <div class="container">
     <h2>About</h2>
     <img src="images/about/1.jpg" alt="About Me">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet dolor dolor. Suspendisse ligula elit, hendrerit ut bibendum quis, facilisis vitae est. Vivamus vitae felis sit amet sem rhoncus euismod. Praesent commodo lorem porttitor. Nam in condimentum ex. Nam accumsan nisi turpis, sed tempus dolor volutpat non. Proin id enim feugiat ipsum consectetur mattis. Nam blandit venenatis nisi, convallis imperdiet nisi condimentum at.</p>
-    <p>Duis convallis ligula sed pretium tristique. Duis nunc risus, lacinia eget cursus id, suscipit ac metus. Sed varius sed tortor congue aliquam. In in dapibus diam, in auctor purus. Praesent vitae tristique diam. Donec tincidunt hendrerit tortor, vitae lobortis purus rutrum sit amet. Nunc non arcu vitae leo rhoncus tincidunt vel sed urna. Sed sed efficitur dui. Morbi id velit nisi. Fusce luctus placerat purus eu cursus.</p>
+    <p>I am machine learning engineer with a passion for software engineering in general.</p>
+    <p>Outside of work, I enjoy getting into the weeds of open source projects while listenin to JaBig's soulful mixes</p>
   </div>
 </section>
 
@@ -185,24 +185,26 @@
       <!-- Project 1 -->
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="images/projects/1.jpg" class="card-img-top" alt="Project 1">
+          <img src="images/projects/2.jpg" class="card-img-top" alt="Project 1">
           <div class="card-body">
-            <h5 class="card-title">Project 1</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
+            <h5 class="card-title">Building GPT</h5>
+            <p class="card-text">In this project I recreate the GPT model from scratch in Pytorch. Then create a pipeline to train and fine-tune it using Ray and MLflow</p>
+            <!-- <a href="#" class="btn btn-primary">Blog Post</a> -->
+            <a href="https://github.com/CtrlMj/GPT" class="btn btn-secondary">GitHub</a>
           </div>
         </div>
       </div>
       <!-- Project 2 -->
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="images/projects/2.jpg" class="card-img-top" alt="Project 2">
+          <img src="images/projects/1.jpg" class="card-img-top" alt="Project 2">
           <div class="card-body">
-            <h5 class="card-title">Project 2</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
+            <h5 class="card-title">Deploy RAG</h5>
+            <p class="card-text">This is a blueprint for deploying a RAG chatbot on a kubernetest cluster with Prometheus and Grafana as monitoring tools
+              with a few thoughts for production deployments.
+            </p>
+            <!-- <a href="#" class="btn btn-primary">Blog Post</a> -->
+            <a href="https://github.com/CtrlMj/deployRAG" class="btn btn-secondary">GitHub</a>
           </div>
         </div>
       </div>
@@ -211,10 +213,10 @@
         <div class="card">
           <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
           <div class="card-body">
-            <h5 class="card-title">Project 3</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
+            <h5 class="card-title">Kubernetes Deployment</h5>
+            <p class="card-text">In this project, I train an image classification model and deploy it via tensorflow serving on kubernetes.</p>
+            <!-- <a href="#" class="btn btn-primary">Blog Post</a> -->
+            <a href="https://github.com/CtrlMj/k8deployment" class="btn btn-secondary">GitHub</a>
           </div>
         </div>
       </div>
@@ -223,7 +225,7 @@
 </section>
 
 <!-- Blogs Section -->
-<section class="skills-section bg-white" id="skills">
+<section class="skills-section bg-white" id="blogs">
   <div class="container">
     <h2 class="text-center">Blogs</h2>
     <div class="row">
@@ -278,25 +280,22 @@
 <!-- Contact Me Section -->
 <section id="contact" class="contact-section text-center text-white bg-dark">
   <div class="container">
-    <h2>Contact Me</h2>
-    <div class="row">
-    </div>
-    <div class="row">
+    <h2>Get in touch</h2>
+    <div class="row justify-content-center">
       <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://linkedin.com/in/yourusername" target="_blank">
+        <a href="https://linkedin.com/in/majid-alikhani/" target="_blank">
           <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
           LinkedIn
         </a>
       </div>
-  
       <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://github.com/yourusername" target="_blank">
+        <a href="https://github.com/CtrlMj" target="_blank">
           <img src="icons/github.png" alt="GitHub" class="social-icon">
           GitHub
         </a>
       </div>
       <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://medium.com/@yourusername" target="_blank">
+        <a href="https://medium.com/@ctrlmj" target="_blank">
           <img src="icons/medium.png" alt="Medium" class="social-icon">
           Medium
         </a>
