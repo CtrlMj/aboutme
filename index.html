@@ -3,323 +3,364 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Section</title>
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<style>
-  .about-section {
-    text-align: center;
-    padding: 50px 0;
-  }
-  .about-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  .about-section img {
-    width: 200px; /* Adjust the size as needed */
-    height: 200px;
-    border-radius: 50%; /* Makes the image round */
-    margin-bottom: 20px;
-  }
-  .about-section p {
-    color: #333;
-  }
-  /* Additional CSS for Projects Section */
-  .projects-section h2 {
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-  }
-  .card {
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a subtle shadow around the card */
-  }
-  .card-img-top {
-    max-height: 180px; /* Adjust this value to fit the image properly in the card */
-    object-fit: cover; /* This makes sure the image covers the area properly */
-  }
-  .card-body {
-    padding: 15px;
-  }
-  .card-title {
-    font-size: 1.25rem;
-  }
-  .card-text {
-    margin-bottom: 15px;
-  }
-  /* Additional CSS for Skills Section */
-  .skills-section h2 {
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-  }
-  .skills-section .card {
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
-  .skills-section .card-img-top {
-    padding: 20px; /* Add padding around your images if needed */
-    background-color: #f8f9fa; /* Adjust the background color if your images have transparent areas */
-    height: 180px; /* Fixed height for consistency */
-    object-fit: contain; /* This will make sure the image is scaled properly within the container */
-  }
-  .skills-section .card-body {
-    padding: 15px;
-  }
-  .skills-section .card-title {
-    font-size: 1.25rem;
-    margin-bottom: 15px;
-  }
-  .skills-section .btn-outline-primary {
-    color: #007bff;
-    border-color: #007bff;
-  }
-  .skills-section .btn-outline-primary:hover {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
-  }
-  /* Additional CSS for Contact Section */
-  .contact-section {
-    padding: 50px 0;
-  }
-  .contact-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-  }
-  .contact-section p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  .social-icon {
-    width: 50px; /* Size of your icons */
-    margin-bottom: 10px;
-  }
-  /* Hover effect for icons */
-  .social-icon:hover {
-    opacity: 0.7;
-  }
-  /* Style for links in the Contact section */
-  .contact-section a {
-    color: #fff;
-    text-decoration: none; /* Removes underline from links */
-    display: inline-block; /* Allows for margin on the bottom */
-    margin-bottom: 10px;
-  }
-  .contact-section a:hover {
-    color: #ddd; /* Color when hovering over the link */
-  }
-  /* CSS for Sticky Navbar */
-  .navbar {
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a shadow for depth */
-  }
-
-  /* Ensure padding is added to body to avoid content being hidden behind the navbar */
-  body { 
-    padding-top: 56px; /* Adjust this value based on the height of your navbar */
-  }
-
-  /* Smooth scroll */
-  html {
-    scroll-behavior: smooth;
-  }
-
-  /* Style for navigation bar links */
-  .navbar-nav .nav-link {
-    color: white;
-  }
-
-  .navbar-nav .nav-link:hover {
-    color: #f8f9fa; /* Slightly lighter white when hovering over links */
-  }
-
-  /* Media query for responsive navbar collapsing */
-  @media (max-width: 992px) {
-    .navbar-collapse {
-      background-color: #343a40; /* Same as navbar color for seamless look */
-    }
-  }
-</style>
+<title>Majid Alikhani — ML Engineer</title>
+<meta name="description" content="Majid Alikhani is a machine learning engineer building LLM agents and retrieval systems, currently at Thomson Reuters Labs.">
+<meta property="og:title" content="Majid Alikhani — ML Engineer">
+<meta property="og:description" content="Machine learning engineer building LLM agents and retrieval systems.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0a0d12">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><linearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22><stop offset=%220%22 stop-color=%22%235eead4%22/><stop offset=%221%22 stop-color=%22%238b8ff0%22/></linearGradient></defs><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22url(%23g)%22/><text x=%2250%22 y=%2266%22 font-size=%2244%22 font-family=%22monospace%22 font-weight=%22700%22 fill=%22%2306110f%22 text-anchor=%22middle%22>MA</text></svg>">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Sticky Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
   <div class="container">
-    <!-- <a class="navbar-brand" href="#home">Portfolio</a> -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <a class="brand" href="#home">
+      <span class="brand-mark">MA</span>
+      Majid Alikhani
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#blogs">Blogs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" data-nav>Home</a></li>
+      <li><a href="#about" data-nav>About</a></li>
+      <li><a href="#experience" data-nav>Experience</a></li>
+      <li><a href="#projects" data-nav>Projects</a></li>
+      <li><a href="#blogs" data-nav>Writing</a></li>
+      <li><a href="#contact" data-nav>Contact</a></li>
+    </ul>
   </div>
 </nav>
 
-<!-- About Section -->
-<section id="about" class="about-section">
+<!-- Hero -->
+<section id="home" class="hero">
   <div class="container">
-    <h2>About</h2>
-    <img src="images/about/1.jpg" alt="About Me">
-    <p>I am machine learning engineer with a passion large language models.</p>
-    <p>Outside of work, I enjoy getting into the weeds of open source projects while listening to JaBig's soulful mixes</p>
+    <span class="eyebrow">Senior Research Engineer · LLM Agents</span>
+    <h1>I build <span class="grad">agentic AI systems</span> that reason over messy, high-stakes data.</h1>
+    <p class="lede">
+      Currently at Thomson Reuters Labs, building human-in-the-loop agents for M&amp;A analysis
+      and verification layers for legal research. Previously: enterprise search, ML platform
+      infrastructure, and graph-based recommenders at Telus.
+    </p>
+    <div class="cta-row">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+    </div>
   </div>
 </section>
 
-<!-- Projects Section -->
-<section class="projects-section bg-light" id="projects">
+<!-- About -->
+<section id="about">
   <div class="container">
-    <h2 class="text-center">Projects</h2>
-    <div class="row">
-      <!-- Project 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/2.jpg" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Building GPT</h5>
-            <p class="card-text">In this project I recreate the GPT model from scratch in Pytorch. Then create a pipeline to train and fine-tune it using Ray and MLflow</p>
-            <!-- <a href="#" class="btn btn-primary">Blog Post</a> -->
-            <a href="https://github.com/CtrlMj/GPT" class="btn btn-secondary">GitHub</a>
-          </div>
+    <div class="section-head reveal">
+      <span class="eyebrow">About</span>
+      <h2>A bit of my story</h2>
+    </div>
+    <div class="about-grid reveal">
+      <div class="avatar" aria-hidden="true">MA</div>
+      <div class="about-copy">
+        <p>
+          I'm a machine learning engineer currently at <strong>Thomson Reuters Labs</strong>, where I build
+          <strong>MAIA</strong>, a human-in-the-loop agent that analyzes complex M&amp;A data rooms and produces
+          evidence-based, traceable recommendations — plus a validation and verification layer for
+          Westlaw's deep research agent.
+        </p>
+        <p>
+          Before that, I spent three years at <strong>Telus</strong> building LLM-powered enterprise search,
+          laying the foundations for promoting ML pipelines from development to production on GCP, and
+          shipping a graph-based recommendation system that was demoed at Google's Toronto office.
+        </p>
+        <p>
+          My path here started somewhere unexpected — <strong>mechanical engineering</strong> — before an MSc
+          in Computer Science pulled me toward deep learning, and I've stayed there since. Lately I've been
+          doing independent research on graph neural networks for recommendation, currently under review at
+          <strong>WSDM 2026</strong>.
+        </p>
+        <p>
+          Outside of work I get lost in open source rabbit holes, usually with a JaBig mix playing in the
+          background.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Experience</span>
+      <h2>Where I've worked</h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <div class="timeline-meta">Aug 2025 — Present</div>
+        <div>
+          <div class="timeline-role">Senior Research Engineer</div>
+          <div class="timeline-org">Thomson Reuters Labs</div>
+          <p class="timeline-desc">
+            Building MAIA, an HITL M&amp;A data room analysis agent, and a validation &amp; verification
+            feature for Westlaw's deep research agent to ensure fiduciary-grade reports.
+          </p>
         </div>
       </div>
-      <!-- Project 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/1.jpg" class="card-img-top" alt="Project 2">
-          <div class="card-body">
-            <h5 class="card-title">Deploy RAG</h5>
-            <p class="card-text">This is a blueprint for deploying a RAG chatbot on a kubernetest cluster with Prometheus and Grafana as monitoring tools
-              with a few thoughts for production deployments.
-            </p>
-            <!-- <a href="#" class="btn btn-primary">Blog Post</a> -->
-            <a href="https://github.com/CtrlMj/deployRAG" class="btn btn-secondary">GitHub</a>
-          </div>
+      <div class="timeline-item">
+        <div class="timeline-meta">Jun 2022 — Aug 2025</div>
+        <div>
+          <div class="timeline-role">Senior ML Engineer</div>
+          <div class="timeline-org">Telus</div>
+          <p class="timeline-desc">
+            LLM-powered enterprise search over Confluence, Jira, and Google Docs; ML pipeline
+            infrastructure on GCP (Kubeflow, Vertex AI, Airflow); a graph-based recommender built on
+            Neo4j, demoed at Google Toronto.
+          </p>
         </div>
       </div>
-      <!-- Project 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Kubernetes Deployment</h5>
-            <p class="card-text">In this project, I train an image classification model and deploy it via tensorflow serving on kubernetes.</p>
-            <!-- <a href="#" class="btn btn-primary">Blog Post</a> -->
-            <a href="https://github.com/CtrlMj/k8deployment" class="btn btn-secondary">GitHub</a>
-          </div>
+      <div class="timeline-item">
+        <div class="timeline-meta">Jun 2021 — May 2022</div>
+        <div>
+          <div class="timeline-role">ML Engineer</div>
+          <div class="timeline-org">Haloo</div>
+          <p class="timeline-desc">
+            IP protection systems using vector search, metric learning, and text recognition
+            (CRNNs, TextSnake) for trademark and logo infringement detection.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Blogs Section -->
-<section class="skills-section bg-white" id="blogs">
+<!-- Skills -->
+<section id="skills">
   <div class="container">
-    <h2 class="text-center">Blogs</h2>
-    <div class="row">
-      <!-- blog 1 -->
-      <div class="col-lg-2 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/blogs/ChatWithConfleunce.png" class="card-img-top" alt="Python">
-          <div class="card-body">
-            <h5 class="card-title">Blog 1</h5>
-            <p class="card-text">Considerations for RAG chatbot</p>
-            <a href="https://medium.com/badal-io/chat-with-your-confluence-1535e661bd3f" class="btn btn-outline-primary">Link to the medium article</a>
-          </div>
+    <div class="section-head reveal">
+      <span class="eyebrow">Skills</span>
+      <h2>Tools I reach for</h2>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-group">
+        <h3>LLMs &amp; Agents</h3>
+        <div class="tag-row">
+          <span class="tag">LangChain</span>
+          <span class="tag">LlamaIndex</span>
+          <span class="tag">RAG</span>
+          <span class="tag">Vector DBs</span>
+          <span class="tag">HuggingFace</span>
+          <span class="tag">Prompting</span>
         </div>
       </div>
-      <!-- blog 2 -->
-      <div class="col-lg-2 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/blogs/RecoSystem.png" class="card-img-top" alt="Data Visualization">
-          <div class="card-body">
-            <h5 class="card-title">Blog 2</h5>
-            <p class="card-text">Building a Real-Time Product Recommender System with Graph Databases: Leveraging Neo4j and BigQuery for E-commerce Data Analysis</p>
-            <a href="https://medium.com/badal-io/building-a-real-time-product-recommender-system-with-graph-databases-leveraging-neo4j-and-bigquery-65b5b361d276" class="btn btn-outline-primary">Link to the medium article</a>
-          </div>
+      <div class="skill-group">
+        <h3>ML &amp; Deep Learning</h3>
+        <div class="tag-row">
+          <span class="tag">PyTorch</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">GNNs</span>
+          <span class="tag">Ray</span>
+          <span class="tag">MLflow</span>
         </div>
       </div>
-      <!-- blog 3 -->
-      <div class="col-lg-2 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/blogs/LangchainVsLlamaIndex.png" class="card-img-top" alt="SQL">
-          <div class="card-body">
-            <h5 class="card-title">Blog 3</h5>
-            <p class="card-text">Exploring LangChain and LlamaIndex to Achieve Standardization and Interoperability in Large Language Models</p>
-            <a href="https://medium.com/badal-io/exploring-langchain-and-llamaindex-to-achieve-standardization-and-interoperability-in-large-2b5f3fabc360" class="btn btn-outline-primary">Link to the medium article</a>
-          </div>
+      <div class="skill-group">
+        <h3>Infra &amp; Cloud</h3>
+        <div class="tag-row">
+          <span class="tag">GCP</span>
+          <span class="tag">AWS</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">Airflow</span>
+          <span class="tag">Vertex AI</span>
         </div>
       </div>
-      <!-- blog 4 -->
-      <div class="col-lg-2 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/blogs/GLM.png" class="card-img-top" alt="Data Storytelling">
-          <div class="card-body">
-            <h5 class="card-title">Blog 4</h5>
-            <p class="card-text">Generalized Linear Models (GLMs)</p>
-            <a href="https://medium.com/@ctrlmj/generalized-linear-models-glms-57bbabc2d986" class="btn btn-outline-primary">Link to the medium article</a>
-          </div>
-        </div>
-      </div>
-      <!-- blog 5 - The Illusion of Thinking -->
-      <div class="col-lg-2 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/blogs/illusion-thinking.jpg" class="card-img-top" alt="The Illusion of Thinking">
-          <div class="card-body">
-            <h5 class="card-title">The Illusion of Thinking</h5>
-            <p class="card-text">Exploring the cognitive biases that shape our decision-making processes</p>
-            <a href="blog/illusion_of_thinking.html" class="btn btn-outline-primary">Read More</a>
-          </div>
+      <div class="skill-group">
+        <h3>Data</h3>
+        <div class="tag-row">
+          <span class="tag">SQL</span>
+          <span class="tag">dbt</span>
+          <span class="tag">Neo4j</span>
+          <span class="tag">BigQuery</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Contact Me Section -->
-<section id="contact" class="contact-section text-center text-white bg-dark">
+<!-- Projects -->
+<section id="projects">
   <div class="container">
-    <h2>Get in touch</h2>
-    <div class="row justify-content-center">
-      <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://linkedin.com/in/majid-alikhani/" target="_blank">
-          <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
-          LinkedIn
-        </a>
+    <div class="section-head reveal">
+      <span class="eyebrow">Projects</span>
+      <h2>Things I've built</h2>
+    </div>
+    <div class="card-grid reveal">
+      <div class="card">
+        <div class="card-media" style="background-image:url('images/projects/2.jpg');background-size:cover;background-position:center;"></div>
+        <div class="card-body">
+          <h3 class="card-title">Building GPT</h3>
+          <p class="card-text">Recreated the GPT model from scratch in PyTorch, then built a pipeline to train and fine-tune it using Ray and MLflow.</p>
+          <div class="card-tags"><span class="tag">PyTorch</span><span class="tag">Ray</span><span class="tag">MLflow</span></div>
+          <a href="https://github.com/CtrlMj/GPT" class="card-link" target="_blank" rel="noopener">
+            GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+          </a>
+        </div>
       </div>
-      <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://github.com/CtrlMj" target="_blank">
-          <img src="icons/github.png" alt="GitHub" class="social-icon">
-          GitHub
-        </a>
+      <div class="card">
+        <div class="card-media" style="background-image:url('images/projects/1.jpg');background-size:cover;background-position:center;"></div>
+        <div class="card-body">
+          <h3 class="card-title">Deploy RAG</h3>
+          <p class="card-text">A blueprint for deploying a RAG chatbot on a Kubernetes cluster, with Prometheus and Grafana for monitoring and notes on production readiness.</p>
+          <div class="card-tags"><span class="tag">Kubernetes</span><span class="tag">Prometheus</span><span class="tag">Grafana</span></div>
+          <a href="https://github.com/CtrlMj/deployRAG" class="card-link" target="_blank" rel="noopener">
+            GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+          </a>
+        </div>
       </div>
-      <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://medium.com/@ctrlmj" target="_blank">
-          <img src="icons/medium.png" alt="Medium" class="social-icon">
-          Medium
-        </a>
+      <div class="card">
+        <div class="card-media" style="background-image:url('images/projects/3.jpg');background-size:cover;background-position:center;"></div>
+        <div class="card-body">
+          <h3 class="card-title">Kubernetes Deployment</h3>
+          <p class="card-text">Trained an image classification model and deployed it via TensorFlow Serving on Kubernetes.</p>
+          <div class="card-tags"><span class="tag">TensorFlow Serving</span><span class="tag">Kubernetes</span></div>
+          <a href="https://github.com/CtrlMj/k8deployment" class="card-link" target="_blank" rel="noopener">
+            GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-media gradient-4">
+          <span class="card-badge">Research</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">GNN-Based Recommendation</h3>
+          <p class="card-text">A lightweight graph neural network architecture using behaviorally-aligned item-item edges, improving recommendation performance over state-of-the-art baselines.</p>
+          <div class="card-tags"><span class="tag">GNNs</span><span class="tag">PyTorch</span><span class="tag">Research</span></div>
+          <span class="card-status">In review · WSDM 2026</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Writing / Blogs -->
+<section id="blogs">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Writing</span>
+      <h2>Things I've written</h2>
+    </div>
+    <div class="card-grid reveal">
+      <div class="card">
+        <div class="card-media" style="background-image:url('images/blogs/ChatWithConfleunce.png');background-size:cover;background-position:center;">
+          <span class="card-badge">RAG</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Chat With Your Confluence</h3>
+          <p class="card-text">Design considerations for building a retrieval-augmented chatbot over enterprise documentation.</p>
+          <a href="https://medium.com/badal-io/chat-with-your-confluence-1535e661bd3f" class="card-link" target="_blank" rel="noopener">
+            Read on Medium
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-media" style="background-image:url('images/blogs/RecoSystem.png');background-size:cover;background-position:center;">
+          <span class="card-badge">Graphs</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Real-Time Recommendations with Graph Databases</h3>
+          <p class="card-text">Building a real-time product recommender system with Neo4j and BigQuery for e-commerce data.</p>
+          <a href="https://medium.com/badal-io/building-a-real-time-product-recommender-system-with-graph-databases-leveraging-neo4j-and-bigquery-65b5b361d276" class="card-link" target="_blank" rel="noopener">
+            Read on Medium
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-media" style="background-image:url('images/blogs/LangchainVsLlamaIndex.png');background-size:cover;background-position:center;">
+          <span class="card-badge">Tooling</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">LangChain vs. LlamaIndex</h3>
+          <p class="card-text">Exploring both frameworks to achieve standardization and interoperability across LLM applications.</p>
+          <a href="https://medium.com/badal-io/exploring-langchain-and-llamaindex-to-achieve-standardization-and-interoperability-in-large-2b5f3fabc360" class="card-link" target="_blank" rel="noopener">
+            Read on Medium
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-media" style="background-image:url('images/blogs/GLM.png');background-size:cover;background-position:center;">
+          <span class="card-badge">Stats</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Generalized Linear Models</h3>
+          <p class="card-text">A walkthrough of GLMs — what they generalize, when to reach for them, and how they differ from plain linear regression.</p>
+          <a href="https://medium.com/@ctrlmj/generalized-linear-models-glms-57bbabc2d986" class="card-link" target="_blank" rel="noopener">
+            Read on Medium
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-media gradient-5">
+          <span class="card-badge">Essay</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">The Illusion of Thinking</h3>
+          <p class="card-text">Exploring the cognitive biases that shape how we reason and make decisions.</p>
+          <a href="blog/illusion_of_thinking.html" class="card-link">
+            Read More
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- Bootstrap JS and dependencies (jQuery and Popper) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Contact -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contact</span>
+      <h2>Get in touch</h2>
+      <p style="margin-left:auto;margin-right:auto;">Open to interesting conversations about LLM agents, ML infra, or anything in between.</p>
+    </div>
+    <div class="contact-links reveal">
+      <a class="contact-link" href="mailto:alikhanimjd@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M3 6l9 7 9-7"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
+        Email
+      </a>
+      <a class="contact-link" href="https://linkedin.com/in/majid-alikhani/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.24h4.56V23H.22V8.24zM8.34 8.24h4.37v2.01h.06c.61-1.15 2.1-2.37 4.32-2.37 4.62 0 5.47 3.04 5.47 7v8.12h-4.56v-7.2c0-1.72-.03-3.93-2.4-3.93-2.4 0-2.77 1.87-2.77 3.8v7.33H8.34V8.24z"/></svg>
+        LinkedIn
+      </a>
+      <a class="contact-link" href="https://github.com/CtrlMj" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.15v3.19c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+        GitHub
+      </a>
+      <a class="contact-link" href="https://medium.com/@ctrlmj" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2.85 3.5c1.57 0 2.85 1.42 2.85 3.17s-1.28 3.17-2.85 3.17S0 8.42 0 6.67 1.28 3.5 2.85 3.5zm10.06.28c1.4 0 2.53 1.53 2.53 3.42s-1.13 3.42-2.53 3.42-2.53-1.53-2.53-3.42 1.13-3.42 2.53-3.42zM21 4.02c.5 0 .9 1.55.9 3.46s-.4 3.46-.9 3.46-.9-1.55-.9-3.46.4-3.46.9-3.46z"/></svg>
+        Medium
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Majid Alikhani. Built with plain HTML, CSS &amp; TypeScript.
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
 <script type="module" src="dist/main.js"></script>
 </body>
 </html>
