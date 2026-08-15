@@ -1,0 +1,258 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\Large Majid Alikhani}} & Email : \href{mailto:Alikhanimjd@gmail.com}{Alikhanimjd@gmail.com}\\
+  \href{linkedin.com/in/majid-alikhani}{linkedin/majid-alikhani} & Mobile : +1-647-861-4771 
+  %\\\href{https://github.com/CtrlMj}{github.com/CtrlMj} & 88 Erskine Ave, Toronto, ON M4P 1Y3
+\end{tabular*}
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Thomson Reuters Labs}{Aug 2025 - Present}
+      {Senior research engineer}{}
+      \resumeItemListStart
+        \resumeItem{MAIA}
+        {A merger and acquisition assistant capable of interactively (HITL) analyzing complex data rooms, providing evidence-based understanding and traceable recommendations personalized to the user's profile to facilitating strategic decision making.}
+        \resumeItem{Westlaw validation and verification}
+        {Introducing a validation and verification feature to Westlaw's deep research agent to ensure fiduciary-grade reports}
+    \resumeItemListEnd
+    \resumeSubheading
+      {Telus}{June 2022 - Aug 2025}
+      {Senior ML Engineer}{}
+      \resumeItemListStart
+        \resumeItem{LLM Agents}
+          {A slack bot for enterprise search which answers questions about the company's documents, e.g., confluence, Jira, Google docs, etc. (LLMs, langchain, LlamaIndex, prompting, GPT embeddings, Vector database, Firestore, Cloud Functions, Cloud Run, PubSub, API Gateway, Flask)}
+        \resumeItem{ML pipelines}
+          {Laying out the foundations for promoting ML pipelines from development to production. Transferring workflows and pipelines from on-prem to GCP (Tensorflow, Service Catalog, Kubeflow, ML metadata, Vertex AI, Airflow, Docker, Terraform, CI/CD cloud build)}\href{https://github.com/GoogleCloudPlatform/terraform-google-enterprise-genai}{github.com/genai}
+          \resumeItem{Data Eng}
+          {Development and testing of an Airflow library to standardize and simplify data ingestion into BigQuery into defining dags in YAML format. (Pytest, Airflow, GCP composer, marshmallow, bitbucket, cloudbuild) }
+          \resumeItem{ML Algorithms}
+          {A graph-based recommendation system presented as a demo at Google's Toronto office. Data from a Google merchandise store was ingested into Neo4j. Graph-based algorithms along with Vertex's matching engine were utilized to provide low-latency real-time recommendations. (Neo4j, Graph Embedding, Vector database, Flask)}
+          
+          \resumeItem{SQL/dbt}
+          {Providing insights to improve Google's CCAI KPIs.}
+     \resumeItemListEnd
+     
+    \resumeSubheading
+      {Haloo}{June 2021 - May 2022}
+      {ML engineer}{}
+      \resumeItemListStart
+        \resumeItem{Machine learning}
+          {Developing smart solutions for IP protection and using LLMs, vector databases, auto-encoders, metric learning, and hierarchical classifiers based on models such as GPT, BERT, ResNet, ResNext, etc. and text recognition algorithms such as CRNNs, TextSnake, etc. (OpenCV, Tensorflow, PyTorch, Keras, HuggingFace)}
+          \resumeItem{Backend}
+          {Development, testing, and monitoring of APIs for search report generation. (Flask\_Restx, Swagger, GCP kubernetes, Postman, Git, Gitlab, Jira)}
+          
+          \resumeItem{Database/Backend}
+          {Designing graph-based database scheme for tabular data. (MySQL, Neo4j)}
+          
+          \resumeItem{Research}
+        {Researching new potentials such as NFTs to expand the target customers. (Pytorch, Tensorflow)}
+     \resumeItemListEnd
+      
+% --------Multiple Positions Heading------------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Information Service Corporation (ISC)}{Sep 2019 - Apr 2020}
+      {Junior developer, technology services}{}
+      \resumeItemListStart
+        \resumeItem{Dev}
+          {Learned the code base to assist in debugging efforts (.NET technologies, C\#, and VB code.)}
+        \resumeItem{SQL}
+          {Wrote and revised reusable SQL procedures in Microsoft SQL database management environment. Developed tests (automated/integrated)}
+        \resumeItem{Client support - task monitor}
+          {Created and assigned tickets for raised incidents. Participated in quality improvement processes as required.}
+        \resumeItem{Knowledge transfer}
+          {Transferred the acquired domain-specific knowledge to replacement staff upon leave.}
+      \resumeItemListEnd
+    
+%     \resumeSubheading
+%       {Sharif University of Technology}{Tehran, Iran}
+%       {Research Assistant - Center of Excellence in Energy Conversion}{June 2017 - Jan 2018}
+%       \resumeItemListStart
+%         \resumeItem{Research Assistant}
+%           {Numerical and Experimental Investigation of ferrofluids on under alternating magnetic field.}
+%         \resumeItem{Teaching Assistant - Numerical Computations and Engineering Mathematics}
+%           {Fill in for the instructor on occasions. Resolving student's issues and misunderstandings. Grading assignments.}
+%       \resumeItemListEnd
+    
+\resumeSubHeadingListEnd
+%-----------Reserch------------------
+\section{Research}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Independent research}{Sep 2025 - Apr 2026}
+      {Independet researcher}{}
+      \resumeItemListStart
+        \resumeItem{GNN-based recommendation model}
+          {A lightweight graph neural network recommendation architecture leveraging behaviorally aligned item-item edges to improve recommendation performance over state-of-the-art baselines; submitted to WSDM 2026}
+      \resumeItemListEnd
+    \resumeSubheading
+      {University of Regina}{Sep 2018 - Sep 2021}
+      {Research and teaching assistant}{}
+      \resumeItemListStart
+        \resumeItem{Research assistant - machine learning}
+          {Deep learning research with a thesis on automatic summarization of financial documents using optimized parametric and non-parametric sentence embeddings from LLMs such as GPT and BERT. Unsupervised and self-supervised techniques are used to develop a language model that outperforms generic language models drawing on distinctions between terms and phrases in a financial context vs general context.}
+        \resumeItem{Teaching assistant - knowledge discovery in database}
+          {Marking Assignments and grading projects. Clarifying concepts and resolving students' issues on the material.}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+%-----------PROJECTS-----------------
+\section{Miscellaneous Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Batmobile replacement agent}
+    {This agent is armed with web search, drawing, and pandas, and reasoning tools to find all supercar factories near batman movie locations and suggest close ones on the map to purchase an alternative to batmobile from}
+    \resumeSubItem{Building and training GPT from scratch}
+    {Built a multi-head attention GPT model in Pytorch and trained and fine-tuned it via Ray on a dummy Shakespear dataset.(Ray, Pytorch, MLflow, pytest) \href{https://github.com/CtrlMj/GPT}{Github}}
+    \resumeSubItem{Open source contribution to langchain}
+      {Resolving various issues on the langchain repository. Additionally, introduced an integration for Vertex's matching engine vector database.}
+    \resumeSubItem{Trademark logo infringement detection}
+      {An algorithm to flag suspicious similarity of a new logo to previously registered trademark logos with the help of machine learning algorithms}\href{https://haloo.ai/}{\textbf{Haloo}}
+    \resumeSubItem{Automatic summarization of financial documents}
+      {Summarization of financial documents with LLMs and non-parametric sentence embeddings.}\href{https://github.com/CtrlMj/Automatic_Summarization}{\textbf{Github}}
+    \resumeSubItem{Transmembrane protein detection}
+      {Classification of protein strings by CNNs and interpreting the network with the explainable AI method Grad-CAM resulting in over 90\% percent specificity and sensitivity. Superior performance to a decision tree trained based on domain knowledge in MATLAB.}\href{https://github.com/CtrlMj/Protein}{\textbf{Github}}
+    \resumeSubItem{ResNet exploration}
+      {Implementation of large ResNet models from scratch and visualizing the impact of various training techniques such as shortcut connections, batch normalization, initialization methods, etc.}\href{https://github.com/CtrlMj/ResNet50_Exploration}{\textbf{Github}}
+    \resumeSubItem{Self driving in simulator}
+      {Automatic steering of the car on Udacity's self-driving simulator with convolutional neural networks.}\href{https://github.com/CtrlMj/SelfDriving_simulation}{\textbf{Github}}
+  \resumeSubHeadingListEnd
+
+%-------Licenses and Certs----------
+\section{Licenses and Certifications}
+ \resumeSubHeadingListStart
+   \resumeSubItem{ML}{Google's professional machine learning engineer}\href{credential.net/76d3dd03-165c-46ce-b850-a3aad97564f0}{\textbf{Certificate}}
+   
+   \resumeSubItem{Data Engineering}{dbt Fundamentals}\href{https://www.credential.net/914f1dd5-4eae-4736-8d9b-20762b35fc07#gs.r01pjc}{\textbf{Certificate}}
+   \resumeSubItem{AI}{Huggingface agents certification}
+ \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Regina}{Sep. 2018 -- Sep. 2021}
+      {Master of Science in Computer Science;  GPA: 4.00}{}
+    \resumeSubheading
+      {Sharif University of Technology}{Sep. 2013 -- Jan. 2018}
+      {Bachelor of Engineering in Mechanical Engineering;  GPA: 3.7 (17.3/20.0)}{}
+  \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+    \item{
+     \textbf{Languages}{: Python, Prompting, SQL, C++, C, MATLAB}
+     }
+     \hfill
+     \item{
+     \textbf{Technologies}{:  GCP/AWS, Docker, Ray, MLflow, Airflow, dbt, Neo4j, Terraform, Linux, Weights and Biases}
+    }
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
